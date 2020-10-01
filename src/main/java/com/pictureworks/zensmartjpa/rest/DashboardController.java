@@ -11,7 +11,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.PostConstruct;
-import java.time.Instant;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -55,7 +54,6 @@ public class DashboardController {
 
     @GetMapping("/api/dashboards/{id}")
     public ResponseEntity<Response> getDashboard(@PathVariable Long id){
-        System.out.println("Dashboard id: "+id);
         Response response = ResponseUtil.getResponse(HttpStatus.OK, "No record found");
         Dashboards dashboardsObj = dashboardsRepository.findById(id).orElse(null);
 
@@ -76,7 +74,6 @@ public class DashboardController {
     @PatchMapping("/api/dashboards")
     public ResponseEntity<Response> updateDashboard(@RequestBody Dashboard obj){
         Response response = save(obj,true);
-        System.out.println(response.getMessage());
         return new ResponseEntity<>(response, response.getStatus());
     }
 

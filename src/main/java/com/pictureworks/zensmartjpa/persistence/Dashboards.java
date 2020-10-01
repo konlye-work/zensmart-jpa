@@ -1,6 +1,5 @@
 package com.pictureworks.zensmartjpa.persistence;
 
-import com.pictureworks.zensmartjpa.model.StringJsonUserType;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

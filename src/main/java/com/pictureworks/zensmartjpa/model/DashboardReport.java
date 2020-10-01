@@ -4,8 +4,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.List;
-
 @Getter
 @Setter
 public class DashboardReport {
@@ -15,6 +13,8 @@ public class DashboardReport {
     private Long dashboard_id;
     @JsonProperty("reports_id")
     private Long reports_id;
+    @JsonProperty("layout_id")
+    private String layout_id;
     @JsonProperty("layout")
     private DashboardLayout layout;
 }
